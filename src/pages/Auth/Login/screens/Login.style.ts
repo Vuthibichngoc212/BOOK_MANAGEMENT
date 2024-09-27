@@ -2,18 +2,21 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles(() => ({
 	formContainer: {
-		flex: 1,
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		flexDirection: 'column',
-		padding: '20px'
+		flex: 1
+		// display: 'flex',
+		// justifyContent: 'center',
+		// alignItems: 'center',
+		// flexDirection: 'column'
+		// padding: '20px'
 	},
 	form: {
-		width: '100%',
-		maxWidth: '400px',
-		padding: '16px',
-		borderRadius: '8px'
+		// width: '100%',
+		height: '100%',
+		// maxWidth: '400px',
+		padding: ' 0px 24px',
+		'&.MuiPaper-root': {
+			borderRadius: '40px 0 0 40px'
+		}
 	},
 	btnLogin: {
 		'&.MuiButtonBase-root': {

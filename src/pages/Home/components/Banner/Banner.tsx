@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import bannerImg from '@/assets/image/bg-login.jpg';
+import bannerImg from '@/assets/image/bg-avt.jpg';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

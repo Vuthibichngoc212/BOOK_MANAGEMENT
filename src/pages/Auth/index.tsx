@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import Register from './Register/screens/Register';
 import Login from './Login/screens/Login';
-// import LOGIN_IMAGE from '@/assets/image/img-login.webp';
-import LOGIN_IMAGE from '@/assets/image/bg-avt.jpg';
+import LOGIN_IMAGE from '@/assets/image/bg-login.svg';
 import { useStyles } from './Auth.style';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
 

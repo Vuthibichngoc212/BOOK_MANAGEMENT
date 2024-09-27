@@ -7,7 +7,7 @@ export const useStyles = makeStyles(() => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#f5f5f5'
+		backgroundColor: '#c2dff7'
 	},
 	imageContainer: {
 		display: 'flex',
@@ -16,8 +16,8 @@ export const useStyles = makeStyles(() => ({
 		overflow: 'hidden'
 	},
 	loginImage: {
-		margin: '1.25rem',
-		borderRadius: '50px'
+		// margin: '1.25rem',
+		// borderRadius: '50px'
 	},
 	'@media (max-width:600px)': {
 		loginImage: {

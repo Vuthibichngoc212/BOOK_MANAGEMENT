@@ -17,14 +17,14 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Box, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { useAppSelector } from '@/redux/hook';
+// import { useAppSelector } from '@/redux/hook';
 import Search from './components/Search';
 import Logo from '@/assets/image/Group1.png';
 
 const Header = () => {
 	const classes = useStyles();
 	// const dispatch = useAppDispatch();
-	const themeMode = useAppSelector((state) => state.ui.themeMode);
+	// const themeMode = useAppSelector((state) => state.ui.themeMode);
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const theme = useTheme();
@@ -110,46 +110,46 @@ const Header = () => {
 					<>
 						<Button
 							className={classes.listItemRoot}
-							sx={{
-								color:
-									themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
-							}}
+							// sx={{
+							// 	color:
+							// 		themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
+							// }}
 						>
 							Home
 						</Button>
 						<Button
 							className={classes.listItemRoot}
-							sx={{
-								color:
-									themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
-							}}
+							// sx={{
+							// 	color:
+							// 		themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
+							// }}
 						>
 							My Book
 						</Button>
 						<Button
 							className={classes.listItemRoot}
-							sx={{
-								color:
-									themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
-							}}
+							// sx={{
+							// 	color:
+							// 		themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
+							// }}
 						>
 							About us
 						</Button>
 						<Button
 							className={classes.listItemRoot}
-							sx={{
-								color:
-									themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
-							}}
+							// sx={{
+							// 	color:
+							// 		themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
+							// }}
 						>
 							Community
 						</Button>
 						<Button
 							className={classes.listItemRoot}
-							sx={{
-								color:
-									themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
-							}}
+							// sx={{
+							// 	color:
+							// 		themeMode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary
+							// }}
 						>
 							Contact
 						</Button>

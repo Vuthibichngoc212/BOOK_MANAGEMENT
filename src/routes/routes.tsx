@@ -2,19 +2,14 @@ import Auth from '@/pages/Auth';
 import ProtectedLayout from '@/components/layout/ProtectedLayout/ProtectedLayout';
 import HomePage from '@/pages/Home/screens/HomePage';
 import { ROUTE_PATH } from '@/constants/routePath.constant';
-import { About } from '@/pages/About';
+import Dashboard from '@/pages/Dashboard/screens/Dashboard';
+import BookManagements from '@/pages/books-management/screens/BookManagements';
+import Orders from '@/pages/odders/screens/Orders';
 
 const routes = [
 	{
-		label: 'Home',
 		path: ROUTE_PATH.ROOT.INDEX,
-		element: <ProtectedLayout />,
-		children: [
-			{
-				path: '',
-				element: <About />
-			}
-		]
+		element: <Auth />
 	},
 	{
 		label: 'Home Page',
@@ -22,8 +17,37 @@ const routes = [
 		element: <HomePage />
 	},
 	{
-		path: ROUTE_PATH.AUTH.LOGIN,
-		element: <Auth />
+		label: 'Home',
+		path: ROUTE_PATH.HOME.INDEX,
+		element: <ProtectedLayout />,
+		children: [
+			{
+				path: ROUTE_PATH.HOME.INDEX,
+				element: <Dashboard />
+			}
+		]
+	},
+	{
+		label: 'Books',
+		path: ROUTE_PATH.BOOKS.INDEX,
+		element: <ProtectedLayout />,
+		children: [
+			{
+				path: ROUTE_PATH.BOOKS.INDEX,
+				element: <BookManagements />
+			}
+		]
+	},
+	{
+		label: 'ORDERS',
+		path: ROUTE_PATH.ORDERS.INDEX,
+		element: <ProtectedLayout />,
+		children: [
+			{
+				path: ROUTE_PATH.ORDERS.INDEX,
+				element: <Orders />
+			}
+		]
 	}
 ];
 

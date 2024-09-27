@@ -13,8 +13,8 @@ const Register = ({ onToggleForm }: any) => {
 	const [showPassword, setShowPassword] = useState(false);
 	const handleClickShowPassword = () => setShowPassword(!showPassword);
 
-	const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-	const handleClickShowConfirmPassword = () => setShowConfirmPassword((show) => !show);
+	// const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+	// const handleClickShowConfirmPassword = () => setShowConfirmPassword((show) => !show);
 
 	const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
 		event.preventDefault();
@@ -32,27 +32,36 @@ const Register = ({ onToggleForm }: any) => {
 		<FormProvider {...methods}>
 			<Box className={classes.formContainer}>
 				<Paper elevation={6} className={classes.form}>
-					<Typography component="h1" variant="h4" align="center" sx={{ fontWeight: 'bold' }}>
-						Đăng ký
-					</Typography>
-					<Typography component="h1" variant="h6" align="center">
-						Bạn đã có tài khoản?{' '}
-						<Link
-							href="#"
-							onClick={onToggleForm}
-							sx={{
-								color: '#ff4081',
-								textDecoration: 'none',
-								'&:hover': {
-									color: '#ff4081'
-								}
-							}}
-						>
-							Log In
-						</Link>
-					</Typography>
+					<Box sx={{ paddingTop: '24px' }}>
+						<Typography component="h1" variant="h4" align="center" sx={{ fontWeight: 'bold' }}>
+							Đăng ký
+						</Typography>
+						<Typography component="h1" variant="h6" align="center">
+							Bạn đã có tài khoản?{' '}
+							<Link
+								href="#"
+								onClick={onToggleForm}
+								sx={{
+									color: '#ff4081',
+									textDecoration: 'none',
+									'&:hover': {
+										color: '#ff4081'
+									}
+								}}
+							>
+								Log In
+							</Link>
+						</Typography>
+					</Box>
 					<form onSubmit={methods.handleSubmit(onSubmit)}>
 						<Box>
+							<CustomTextField
+								label="Username"
+								placeholder="Nhập họ tên"
+								name="username"
+								control={methods.control}
+								required
+							/>
 							<CustomTextField
 								label="Họ tên"
 								placeholder="Nhập họ tên"
@@ -64,6 +73,20 @@ const Register = ({ onToggleForm }: any) => {
 								label="Email"
 								placeholder="Nhập email"
 								name="email"
+								control={methods.control}
+								required
+							/>
+							<CustomTextField
+								label="Số điện thoại"
+								placeholder="Số điện thoại"
+								name="phone"
+								control={methods.control}
+								required
+							/>
+							<CustomTextField
+								label="Địa chỉ"
+								placeholder="Địa chỉ"
+								name="address"
 								control={methods.control}
 								required
 							/>
@@ -93,7 +116,7 @@ const Register = ({ onToggleForm }: any) => {
 									)
 								}}
 							/>
-							<CustomTextField
+							{/* <CustomTextField
 								required
 								label="Nhập lại mật khẩu"
 								placeholder="Nhập lại mật khẩu"
@@ -118,7 +141,7 @@ const Register = ({ onToggleForm }: any) => {
 										</InputAdornment>
 									)
 								}}
-							/>
+							/> */}
 							<Button type="submit" fullWidth variant="contained" className={classes.btn}>
 								Đăng ký
 							</Button>

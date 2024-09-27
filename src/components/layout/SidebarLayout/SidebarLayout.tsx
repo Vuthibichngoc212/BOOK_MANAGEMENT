@@ -139,7 +139,6 @@ const SideBar = () => {
 				<Divider />
 				<List>
 					{sidebar?.map((data: any) => {
-						if (data.name === 'profile') return;
 						return (
 							<Box
 								key={data.label}

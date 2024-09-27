@@ -3,6 +3,7 @@ import { Box, Stack } from '@mui/material';
 import styles from './layouts.module.css';
 import { ROUTE_PATH } from '@/constants/routePath.constant';
 import SideBar from '../SidebarLayout/SidebarLayout';
+import HeaderAdmin from '../HeaderAdmin/HeaderAdmin';
 
 function ProtectedLayout() {
 	const outlet = useOutlet();
@@ -22,11 +23,11 @@ function ProtectedLayout() {
 					width: '100%'
 				}}
 			>
-				{/* <Header /> */}
+				<HeaderAdmin />
+
 				<Stack
 					sx={{
-						margin: '4rem 0 0 0',
-						padding: '0 2.4rem'
+						margin: '24px'
 					}}
 				>
 					<Box sx={{ mb: '6.5rem' }}> {outlet}</Box>
